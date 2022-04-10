@@ -18,6 +18,7 @@
   "require-dev": {
     "laravel/framework": "~6.0",
     "phpunit/phpunit": "~9.5",
+    "phpspec/phpspec": "^7.2",
     "laracasts/testdummy": "~2.0",
     "orchestra/testbench": "~4.0",
     "codeclimate/php-test-reporter": "^0.3.2"
