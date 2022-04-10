@@ -44,9 +44,9 @@ Notifynder v. 3.0 Change log:
 - Removed queue system at the moment, I want to think something cool for it, using
   The way of laravel 5 will be implemented in notifynder v 3.1.0
 
-- fixed method on issue: https://github.com/fenos/Notifynder/issues/22
+- fixed method on issue: https://github.com/Itoufo/Notifynder/issues/22
 
-- Added order be date when retrieving notifications, issue: https://github.com/fenos/Notifynder/issues/19
+- Added order be date when retrieving notifications, issue: https://github.com/Itoufo/Notifynder/issues/19
 
 - Builder is now part of the Notifynder class, you can access to the builder directly from the Notifynder
   class and you can chain your custom and default method for send the notification! Cool!

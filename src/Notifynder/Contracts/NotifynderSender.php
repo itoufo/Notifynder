@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Contracts;
+namespace Itoufo\Notifynder\Contracts;
 
-use Fenos\Notifynder\Senders\SendOne;
-use Fenos\Notifynder\Senders\SendMultiple;
+use Itoufo\Notifynder\Senders\SendOne;
+use Itoufo\Notifynder\Senders\SendMultiple;
 
 /**
  * Class SenderManager.

@@ -1,12 +1,12 @@
 <?php
 
-namespace Fenos\Notifynder\Senders;
+namespace Itoufo\Notifynder\Senders;
 
-use Fenos\Notifynder\Contracts\NotifynderCategory;
-use Fenos\Notifynder\Contracts\NotifynderGroup;
-use Fenos\Notifynder\Contracts\DefaultSender;
-use Fenos\Notifynder\Contracts\StoreNotification;
-use Fenos\Notifynder\NotifynderManager;
+use Itoufo\Notifynder\Contracts\NotifynderCategory;
+use Itoufo\Notifynder\Contracts\NotifynderGroup;
+use Itoufo\Notifynder\Contracts\DefaultSender;
+use Itoufo\Notifynder\Contracts\StoreNotification;
+use Itoufo\Notifynder\NotifynderManager;
 
 /**
  * Class SendGroup.

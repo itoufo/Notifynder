@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Categories;
+namespace Itoufo\Notifynder\Categories;
 
-use Fenos\Notifynder\Contracts\CategoryDB;
-use Fenos\Notifynder\Models\NotificationCategory;
+use Itoufo\Notifynder\Contracts\CategoryDB;
+use Itoufo\Notifynder\Models\NotificationCategory;
 use Illuminate\Database\Eloquent\Builder;
 
 /**

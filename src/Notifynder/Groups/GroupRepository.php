@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Groups;
+namespace Itoufo\Notifynder\Groups;
 
-use Fenos\Notifynder\Contracts\NotifynderGroupDB;
-use Fenos\Notifynder\Models\NotificationGroup;
+use Itoufo\Notifynder\Contracts\NotifynderGroupDB;
+use Itoufo\Notifynder\Models\NotificationGroup;
 use Illuminate\Database\Eloquent\Builder;
 
 /**

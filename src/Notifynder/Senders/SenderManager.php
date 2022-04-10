@@ -1,13 +1,13 @@
 <?php
 
-namespace Fenos\Notifynder\Senders;
+namespace Itoufo\Notifynder\Senders;
 
 use BadMethodCallException;
 use Closure;
-use Fenos\Notifynder\Contracts\DefaultSender;
-use Fenos\Notifynder\Contracts\NotifynderSender;
-use Fenos\Notifynder\Contracts\Sender;
-use Fenos\Notifynder\Contracts\StoreNotification;
+use Itoufo\Notifynder\Contracts\DefaultSender;
+use Itoufo\Notifynder\Contracts\NotifynderSender;
+use Itoufo\Notifynder\Contracts\Sender;
+use Itoufo\Notifynder\Contracts\StoreNotification;
 use Illuminate\Contracts\Container\Container;
 use LogicException;
 

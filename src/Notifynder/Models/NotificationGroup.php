@@ -1,6 +1,6 @@
 <?php
 
-namespace Fenos\Notifynder\Models;
+namespace Itoufo\Notifynder\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,7 +25,7 @@ class NotificationGroup extends Model
     public function categories()
     {
         return $this->belongsToMany(
-            'Fenos\Notifynder\Models\NotificationCategory',
+            'Itoufo\Notifynder\Models\NotificationCategory',
             'notifications_categories_in_groups',
             'group_id', 'category_id'
         );

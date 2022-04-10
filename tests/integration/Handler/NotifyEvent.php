@@ -1,7 +1,7 @@
 <?php
 
-use Fenos\Notifynder\Contracts\NotifyListener;
-use Fenos\Notifynder\Handler\NotifynderEvent;
+use Itoufo\Notifynder\Contracts\NotifyListener;
+use Itoufo\Notifynder\Handler\NotifynderEvent;
 
 /**
  * Class NotifyEvent.

@@ -1,24 +1,24 @@
 <?php
 
-$factory('Fenos\Notifynder\Models\NotificationCategory', [
+$factory('Itoufo\Notifynder\Models\NotificationCategory', [
 
     'name' => $faker->name,
     'text' => 'test notification',
 ]);
 
-$factory('Fenos\Tests\Models\User', [
+$factory('Itoufo\Tests\Models\User', [
 
     'name' => $faker->name,
     'surname' => $faker->lastName,
 ]);
 
-$factory('Fenos\Notifynder\Models\Notification', [
+$factory('Itoufo\Notifynder\Models\Notification', [
 
-    'from_id' => 'factory:Fenos\Tests\Models\User',
-    'from_type' => 'Fenos\Tests\Models\User',
-    'to_id' => 'factory:Fenos\Tests\Models\User',
-    'to_type' => 'Fenos\Tests\Models\User',
-    'category_id' => 'factory:Fenos\Notifynder\Models\NotificationCategory',
+    'from_id' => 'factory:Itoufo\Tests\Models\User',
+    'from_type' => 'Itoufo\Tests\Models\User',
+    'to_id' => 'factory:Itoufo\Tests\Models\User',
+    'to_type' => 'Itoufo\Tests\Models\User',
+    'category_id' => 'factory:Itoufo\Notifynder\Models\NotificationCategory',
     'url' => $faker->url,
     'extra' => json_encode(['exta.name' => $faker->name]),
     'read' => 0,
@@ -27,6 +27,6 @@ $factory('Fenos\Notifynder\Models\Notification', [
     'updated_at' => $faker->dateTime,
 ]);
 
-$factory('Fenos\Notifynder\Models\NotificationGroup', [
+$factory('Itoufo\Notifynder\Models\NotificationGroup', [
     'name' => $faker->name,
 ]);

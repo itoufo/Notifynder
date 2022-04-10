@@ -1,6 +1,6 @@
 <?php
 
-use Fenos\Notifynder\Translator\TranslatorManager;
+use Itoufo\Notifynder\Translator\TranslatorManager;
 
 /**
  * Class TranslatorTest.

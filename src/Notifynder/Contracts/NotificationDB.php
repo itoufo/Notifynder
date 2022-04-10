@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Contracts;
+namespace Itoufo\Notifynder\Contracts;
 
 use Closure;
-use Fenos\Notifynder\Models\Notification;
+use Itoufo\Notifynder\Models\Notification;
 
 /**
  * Class NotificationRepository.

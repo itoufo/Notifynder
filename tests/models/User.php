@@ -1,8 +1,8 @@
 <?php
 
-namespace Fenos\Tests\Models;
+namespace Itoufo\Tests\Models;
 
-use Fenos\Notifynder\Notifable;
+use Itoufo\Notifynder\Notifable;
 
 class User extends \Illuminate\Database\Eloquent\Model
 {

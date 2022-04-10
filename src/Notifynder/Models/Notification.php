@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Models;
+namespace Itoufo\Notifynder\Models;
 
-use Fenos\Notifynder\Notifications\ExtraParams;
-use Fenos\Notifynder\Parsers\NotifynderParser;
+use Itoufo\Notifynder\Notifications\ExtraParams;
+use Itoufo\Notifynder\Parsers\NotifynderParser;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -172,7 +172,7 @@ class Notification extends Model
 
     /**
      * @param $value
-     * @return \Fenos\Notifynder\Notifications\ExtraParams
+     * @return \Itoufo\Notifynder\Notifications\ExtraParams
      */
     public function getExtraAttribute($value)
     {

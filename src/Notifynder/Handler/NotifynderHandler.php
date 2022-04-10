@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Handler;
+namespace Itoufo\Notifynder\Handler;
 
-use Fenos\Notifynder\Contracts\NotifyListener;
-use Fenos\Notifynder\Notifynder;
+use Itoufo\Notifynder\Contracts\NotifyListener;
+use Itoufo\Notifynder\Notifynder;
 
 /**
  * Class NotifynderHandler.

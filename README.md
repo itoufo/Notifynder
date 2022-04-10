@@ -1,17 +1,17 @@
 Notifynder 3.2 - Laravel 5
 ==========================
 
-[![GitHub release](https://img.shields.io/github/release/fenos/Notifynder.svg?style=flat-square)](https://github.com/fenos/Notifynder/releases)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/fenos/Notifynder/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/fenos/Notifynder.svg?style=flat-square)](https://github.com/fenos/Notifynder/issues)
-[![Total Downloads](https://img.shields.io/packagist/dt/fenos/notifynder.svg?style=flat-square)](https://packagist.org/packages/fenos/notifynder)
+[![GitHub release](https://img.shields.io/github/release/Itoufo/Notifynder.svg?style=flat-square)](https://github.com/Itoufo/Notifynder/releases)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Itoufo/Notifynder/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Itoufo/Notifynder.svg?style=flat-square)](https://github.com/Itoufo/Notifynder/issues)
+[![Total Downloads](https://img.shields.io/packagist/dt/Itoufo/notifynder.svg?style=flat-square)](https://packagist.org/packages/Itoufo/notifynder)
 
-[![Travis branch](https://img.shields.io/travis/fenos/Notifynder/master.svg?style=flat-square)](https://travis-ci.org/fenos/Notifynder/branches)
+[![Travis branch](https://img.shields.io/travis/Itoufo/Notifynder/master.svg?style=flat-square)](https://travis-ci.org/Itoufo/Notifynder/branches)
 [![StyleCI](https://styleci.io/repos/18425539/shield)](https://styleci.io/repos/18425539)
-[![Scrutinizer Build](https://img.shields.io/scrutinizer/build/g/fenos/Notifynder.svg?style=flat-square)](https://scrutinizer-ci.com/g/fenos/Notifynder/?branch=master)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/fenos/Notifynder.svg?style=flat-square)](https://scrutinizer-ci.com/g/fenos/Notifynder/?branch=master)
-[![Code Climate](https://img.shields.io/codeclimate/github/fenos/Notifynder.svg?style=flat-square)](https://codeclimate.com/github/fenos/Notifynder)
-[![Code Climate](https://img.shields.io/codeclimate/issues/github/fenos/Notifynder.svg?style=flat-square)](https://codeclimate.com/github/fenos/Notifynder/issues)
+[![Scrutinizer Build](https://img.shields.io/scrutinizer/build/g/Itoufo/Notifynder.svg?style=flat-square)](https://scrutinizer-ci.com/g/Itoufo/Notifynder/?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/Itoufo/Notifynder.svg?style=flat-square)](https://scrutinizer-ci.com/g/Itoufo/Notifynder/?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/github/Itoufo/Notifynder.svg?style=flat-square)](https://codeclimate.com/github/Itoufo/Notifynder)
+[![Code Climate](https://img.shields.io/codeclimate/issues/github/Itoufo/Notifynder.svg?style=flat-square)](https://codeclimate.com/github/Itoufo/Notifynder/issues)
 
 [![Slack Team](https://img.shields.io/badge/slack-notifynder-orange.svg?style=flat-square)](https://notifynder.slack.com)
 [![Slack join](https://img.shields.io/badge/slack-join-green.svg?style=social)](https://notifynder.signup.team)
@@ -25,7 +25,7 @@ You get started in a couple of minutes to "enable" notifications in your Laravel
 
 Compatible DBs: **MySql** - **PostgresSql** - **Sqlite**
 
-Documentation: **[Notifynder Wiki](https://github.com/fenos/Notifynder/wiki)**
+Documentation: **[Notifynder Wiki](https://github.com/Itoufo/Notifynder/wiki)**
 
 - - -
 
@@ -35,7 +35,7 @@ Documentation: **[Notifynder Wiki](https://github.com/fenos/Notifynder/wiki)**
 
 Add it on your `composer.json`
 
-    "fenos/notifynder": "^3.2"
+    "Itoufo/notifynder": "^3.2"
 
 and run 
 
@@ -43,7 +43,7 @@ and run
 
 or run
 
-    composer require fenos/notifynder
+    composer require Itoufo/notifynder
 
 
 ### Step 2 ###
@@ -52,11 +52,11 @@ Add the following string to `config/app.php`
 
 **Providers array:**
 
-    Fenos\Notifynder\NotifynderServiceProvider::class,
+    Itoufo\Notifynder\NotifynderServiceProvider::class,
 
 **Aliases array:**
 
-    'Notifynder' => Fenos\Notifynder\Facades\Notifynder::class,
+    'Notifynder' => Itoufo\Notifynder\Facades\Notifynder::class,
 
 
 ### Step 3 ###
@@ -65,7 +65,7 @@ Add the following string to `config/app.php`
 
 Publish the migration as well as the configuration of notifynder with the following command:
 
-    php artisan vendor:publish --provider="Fenos\Notifynder\NotifynderServiceProvider"
+    php artisan vendor:publish --provider="Itoufo\Notifynder\NotifynderServiceProvider"
 
 Run the migration
 
@@ -102,7 +102,7 @@ Notifynder::getAll($user_id,$limit,$paginateBool);
 Notifynder::readAll($user_id);
 ```
 
-To know more, such as the advance usage of Notifynder Visit the **[Notifynder Wiki](https://github.com/fenos/Notifynder/wiki)**.
+To know more, such as the advance usage of Notifynder Visit the **[Notifynder Wiki](https://github.com/Itoufo/Notifynder/wiki)**.
 
 #### Contributors ####
 

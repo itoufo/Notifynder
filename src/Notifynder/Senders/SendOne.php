@@ -1,10 +1,10 @@
 <?php
 
-namespace Fenos\Notifynder\Senders;
+namespace Itoufo\Notifynder\Senders;
 
-use Fenos\Notifynder\Contracts\DefaultSender;
-use Fenos\Notifynder\Contracts\StoreNotification;
-use Fenos\Notifynder\Exceptions\CategoryNotFoundException;
+use Itoufo\Notifynder\Contracts\DefaultSender;
+use Itoufo\Notifynder\Contracts\StoreNotification;
+use Itoufo\Notifynder\Exceptions\CategoryNotFoundException;
 
 /**
  * Class SendSingle.
@@ -44,7 +44,7 @@ class SendOne implements DefaultSender
      * specified in the array of information.
      *
      * @return bool
-     * @throws \Fenos\Notifynder\Exceptions\CategoryNotFoundException
+     * @throws \Itoufo\Notifynder\Exceptions\CategoryNotFoundException
      */
     protected function hasCategory()
     {

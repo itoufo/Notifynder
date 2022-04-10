@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Senders;
+namespace Itoufo\Notifynder\Senders;
 
-use Fenos\Notifynder\Contracts\DefaultSender;
-use Fenos\Notifynder\Contracts\StoreNotification;
+use Itoufo\Notifynder\Contracts\DefaultSender;
+use Itoufo\Notifynder\Contracts\StoreNotification;
 
 /**
  * Class SendMultiple.

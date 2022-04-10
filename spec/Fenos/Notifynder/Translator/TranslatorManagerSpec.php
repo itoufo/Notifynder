@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Fenos\Notifynder\Translator;
+namespace spec\Itoufo\Notifynder\Translator;
 
-use Fenos\Notifynder\Exceptions\NotificationLanguageNotFoundException;
-use Fenos\Notifynder\Exceptions\NotificationTranslationNotFoundException;
-use Fenos\Notifynder\Translator\Compiler;
+use Itoufo\Notifynder\Exceptions\NotificationLanguageNotFoundException;
+use Itoufo\Notifynder\Exceptions\NotificationTranslationNotFoundException;
+use Itoufo\Notifynder\Translator\Compiler;
 use Illuminate\Contracts\Config\Repository;
 use PhpSpec\ObjectBehavior;
 
@@ -17,7 +17,7 @@ class TranslatorManagerSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Fenos\Notifynder\Translator\TranslatorManager');
+        $this->shouldHaveType('Itoufo\Notifynder\Translator\TranslatorManager');
     }
 
     /** @test */

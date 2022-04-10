@@ -1,13 +1,13 @@
 <?php
 
-namespace Fenos\Notifynder\Builder;
+namespace Itoufo\Notifynder\Builder;
 
 use ArrayAccess;
 use Carbon\Carbon;
-use Fenos\Notifynder\Contracts\NotifynderCategory;
-use Fenos\Notifynder\Exceptions\EntityNotIterableException;
-use Fenos\Notifynder\Exceptions\IterableIsEmptyException;
-use Fenos\Notifynder\Exceptions\NotificationBuilderException;
+use Itoufo\Notifynder\Contracts\NotifynderCategory;
+use Itoufo\Notifynder\Exceptions\EntityNotIterableException;
+use Itoufo\Notifynder\Exceptions\IterableIsEmptyException;
+use Itoufo\Notifynder\Exceptions\NotificationBuilderException;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Database\Eloquent\Model;
 use Traversable;
@@ -190,8 +190,8 @@ class NotifynderBuilder implements ArrayAccess
      * @param          $dataToIterate
      * @param  Closure $builder
      * @return $this
-     * @throws \Fenos\Notifynder\Exceptions\IterableIsEmptyException
-     * @throws \Fenos\Notifynder\Exceptions\EntityNotIterableException
+     * @throws \Itoufo\Notifynder\Exceptions\IterableIsEmptyException
+     * @throws \Itoufo\Notifynder\Exceptions\EntityNotIterableException
      */
     public function loop($dataToIterate, Closure $builder)
     {

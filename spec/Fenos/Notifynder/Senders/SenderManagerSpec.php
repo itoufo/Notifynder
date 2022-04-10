@@ -1,11 +1,11 @@
 <?php
 
-namespace spec\Fenos\Notifynder\Senders;
+namespace spec\Itoufo\Notifynder\Senders;
 
 use BadMethodCallException;
-use Fenos\Notifynder\Contracts\DefaultSender;
-use Fenos\Notifynder\Contracts\StoreNotification;
-use Fenos\Notifynder\Senders\SenderFactory;
+use Itoufo\Notifynder\Contracts\DefaultSender;
+use Itoufo\Notifynder\Contracts\StoreNotification;
+use Itoufo\Notifynder\Senders\SenderFactory;
 use Illuminate\Contracts\Foundation\Application;
 use PhpSpec\ObjectBehavior;
 
@@ -18,7 +18,7 @@ class SenderManagerSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Fenos\Notifynder\Senders\SenderManager');
+        $this->shouldHaveType('Itoufo\Notifynder\Senders\SenderManager');
     }
 
     /** @test */

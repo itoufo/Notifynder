@@ -1,15 +1,15 @@
 <?php
 
-namespace Fenos\Notifynder\Senders;
+namespace Itoufo\Notifynder\Senders;
 
 /*
  * Class NotifynderSenderFactory
  *
- * @package Fenos\Notifynder
+ * @package Itoufo\Notifynder
  */
-use Fenos\Notifynder\Builder\NotifynderBuilder;
-use Fenos\Notifynder\Contracts\NotifynderCategory;
-use Fenos\Notifynder\Contracts\NotifynderGroup;
+use Itoufo\Notifynder\Builder\NotifynderBuilder;
+use Itoufo\Notifynder\Contracts\NotifynderCategory;
+use Itoufo\Notifynder\Contracts\NotifynderGroup;
 
 /**
  * Class SenderFactory.

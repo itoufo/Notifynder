@@ -1,6 +1,6 @@
 <?php
 
-namespace Fenos\Notifynder\Facades;
+namespace Itoufo\Notifynder\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fenos\Notifynder\Contracts;
+namespace Itoufo\Notifynder\Contracts;
 
-use Fenos\Notifynder\Exceptions\CategoryNotFoundException;
+use Itoufo\Notifynder\Exceptions\CategoryNotFoundException;
 
 /**
  * Class CategoryManager.
@@ -45,7 +45,7 @@ interface NotifynderCategory
      *
      * @param $name
      * @param $text
-     * @return \Fenos\Notifynder\Models\NotificationCategory
+     * @return \Itoufo\Notifynder\Models\NotificationCategory
      */
     public function add($name, $text);
 

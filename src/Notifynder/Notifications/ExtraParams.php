@@ -1,6 +1,6 @@
 <?php
 
-namespace Fenos\Notifynder\Notifications;
+namespace Itoufo\Notifynder\Notifications;
 
 use ArrayAccess;
 use JsonSerializable;

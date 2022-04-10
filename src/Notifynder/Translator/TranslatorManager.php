@@ -1,10 +1,10 @@
 <?php
 
-namespace Fenos\Notifynder\Translator;
+namespace Itoufo\Notifynder\Translator;
 
-use Fenos\Notifynder\Contracts\NotifynderTranslator;
-use Fenos\Notifynder\Exceptions\NotificationLanguageNotFoundException;
-use Fenos\Notifynder\Exceptions\NotificationTranslationNotFoundException;
+use Itoufo\Notifynder\Contracts\NotifynderTranslator;
+use Itoufo\Notifynder\Exceptions\NotificationLanguageNotFoundException;
+use Itoufo\Notifynder\Exceptions\NotificationTranslationNotFoundException;
 use Illuminate\Contracts\Config\Repository;
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace spec\Fenos\Notifynder\Handler;
+namespace spec\Itoufo\Notifynder\Handler;
 
-use Fenos\Notifynder\Handler\NotifynderEvent;
-use Fenos\Notifynder\NotifynderManager;
+use Itoufo\Notifynder\Handler\NotifynderEvent;
+use Itoufo\Notifynder\NotifynderManager;
 use Illuminate\Contracts\Events\Dispatcher;
 use PhpSpec\ObjectBehavior;
 
@@ -16,7 +16,7 @@ class DispatcherSpec extends ObjectBehavior
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Fenos\Notifynder\Handler\Dispatcher');
+        $this->shouldHaveType('Itoufo\Notifynder\Handler\Dispatcher');
     }
 
     /** @test */

@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Artisan;
+namespace Itoufo\Notifynder\Artisan;
 
-use Fenos\Notifynder\Contracts\NotifynderGroup;
-use Fenos\Notifynder\Parsers\ArtisanOptionsParser;
+use Itoufo\Notifynder\Contracts\NotifynderGroup;
+use Itoufo\Notifynder\Parsers\ArtisanOptionsParser;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -39,7 +39,7 @@ class PushCategoryToGroup extends Command
      *
      * @param  NotifynderGroup                              $notifynderGroup
      * @param  ArtisanOptionsParser                         $artisanOptionsParser
-     * @return \Fenos\Notifynder\Artisan\PushCategoryToGroup
+     * @return \Itoufo\Notifynder\Artisan\PushCategoryToGroup
      */
     public function __construct(NotifynderGroup $notifynderGroup,
         ArtisanOptionsParser $artisanOptionsParser)

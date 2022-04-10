@@ -1,5 +1,5 @@
 {
-  "name": "fenos/notifynder",
+  "name": "itoufo/notifynder",
   "description": "Management system of internal notifications for Laravel 5.*",
   "keywords": ["notifications", "laravel"],
   "license": "MIT",
@@ -28,7 +28,7 @@
 
     ],
     "psr-4": {
-      "Fenos\\Notifynder\\": "src/Notifynder"
+      "Itoufo\\Notifynder\\": "src/Notifynder"
     }
   },
   "autoload-dev": {
@@ -36,7 +36,7 @@
       "tests/TestCaseDB.php"
     ],
     "psr-4": {
-      "Fenos\\Tests\\": "tests/models"
+      "Itoufo\\Tests\\": "tests/models"
     }
   },
   "minimum-stability": "stable"

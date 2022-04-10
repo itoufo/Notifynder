@@ -1,11 +1,11 @@
 <?php
 
-namespace Fenos\Notifynder\Groups;
+namespace Itoufo\Notifynder\Groups;
 
-use Fenos\Notifynder\Contracts\NotifynderCategory;
-use Fenos\Notifynder\Contracts\NotifynderGroupCategoryDB;
-use Fenos\Notifynder\Models\NotificationCategory;
-use Fenos\Notifynder\Models\NotificationGroup;
+use Itoufo\Notifynder\Contracts\NotifynderCategory;
+use Itoufo\Notifynder\Contracts\NotifynderGroupCategoryDB;
+use Itoufo\Notifynder\Models\NotificationCategory;
+use Itoufo\Notifynder\Models\NotificationGroup;
 
 /**
  * Class NotificationGroupCategoryRepository.

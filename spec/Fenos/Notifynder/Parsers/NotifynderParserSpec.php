@@ -1,16 +1,16 @@
 <?php
 
-namespace spec\Fenos\Notifynder\Parsers;
+namespace spec\Itoufo\Notifynder\Parsers;
 
-use Fenos\Notifynder\Exceptions\ExtraParamsException;
-use Fenos\Notifynder\Parsers\NotifynderParser;
+use Itoufo\Notifynder\Exceptions\ExtraParamsException;
+use Itoufo\Notifynder\Parsers\NotifynderParser;
 use PhpSpec\ObjectBehavior;
 
 class NotifynderParserSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Fenos\Notifynder\Parsers\NotifynderParser');
+        $this->shouldHaveType('Itoufo\Notifynder\Parsers\NotifynderParser');
     }
 
     /** @test */
@@ -107,7 +107,7 @@ class NotifynderParserSpec extends ObjectBehavior
     {
         $extra = [
             'name' => 'fabri',
-            'username' => 'fenos',
+            'username' => 'Itoufo',
             'status' => 'active',
             'prof' => 'dev',
         ];

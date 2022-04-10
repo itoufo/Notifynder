@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Notifynder\Contracts;
+namespace Itoufo\Notifynder\Contracts;
 
-use Fenos\Notifynder\Exceptions\NotificationLanguageNotFoundException;
-use Fenos\Notifynder\Exceptions\NotificationTranslationNotFoundException;
+use Itoufo\Notifynder\Exceptions\NotificationLanguageNotFoundException;
+use Itoufo\Notifynder\Exceptions\NotificationTranslationNotFoundException;
 
 /**
  * Class NotifynderTranslator.

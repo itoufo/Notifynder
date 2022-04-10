@@ -1,6 +1,6 @@
 <?php
 
-namespace Fenos\Notifynder\Contracts;
+namespace Itoufo\Notifynder\Contracts;
 
 /**
  * Class CategoryRepository.
