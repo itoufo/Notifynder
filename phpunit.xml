@@ -10,13 +10,13 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Notifynder DB Integration Suite">
+        <testsuite name="Notifer DB Integration Suite">
             <directory suffix=".php">./tests/integration</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/Notifynder</directory>
+            <directory suffix=".php">./src/Notifer</directory>
         </whitelist>
         <exclude>
             <directory>./vendor</directory>

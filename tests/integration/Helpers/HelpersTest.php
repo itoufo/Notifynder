@@ -1,16 +1,16 @@
 <?php
 
-use Fenos\Notifynder\Collections\Config;
+use Itoufo\Notifer\Collections\Config;
 
-class HelpersTest extends NotifynderTestCase
+class HelpersTest extends NotiferTestCase
 {
-    public function testNotifynderConfig()
+    public function testNotiferConfig()
     {
-        $this->assertInstanceOf(Config::class, notifynder_config());
+        $this->assertInstanceOf(Config::class, notifer_config());
     }
 
-    public function testNotifynderConfigGet()
+    public function testNotiferConfigGet()
     {
-        $this->assertInternalType('bool', notifynder_config('polymorphic'));
+        $this->assertInternalType('bool', notifer_config('polymorphic'));
     }
 }

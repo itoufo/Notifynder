@@ -1,10 +1,10 @@
 <?php
 
-use Fenos\Notifynder\Builder\Notification;
-use Fenos\Notifynder\Parsers\NotificationParser;
+use Itoufo\Notifer\Builder\Notification;
+use Itoufo\Notifer\Parsers\NotificationParser;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-class NotificationParserTest extends NotifynderTestCase
+class NotificationParserTest extends NotiferTestCase
 {
     public function testParseThrowsModelNotFoundExceptionIfCategoryIsNull()
     {

@@ -1,8 +1,8 @@
 <?php
 
-use Fenos\Notifynder\Builder\Notification;
+use Itoufo\Notifer\Builder\Notification;
 
-class BuilderNotificationTest extends NotifynderTestCase
+class BuilderNotificationTest extends NotiferTestCase
 {
     public function testPublicMethods()
     {

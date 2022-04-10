@@ -30,27 +30,27 @@
     "satooshi/php-coveralls": "*"
   },
   "suggest": {
-    "astrotomic/notifynder-sender-email": "Allows to send notifications as email.",
-    "astrotomic/notifynder-sender-redis": "Allows to send notifications via Redis (Pub/Sub).",
-    "astrotomic/notifynder-sender-slack": "Allows to send notifications via Slack.",
-    "astrotomic/notifynder-sender-messagebird": "Allows to send notifications via MessageBird.",
-    "astrotomic/notifynder-sender-nexmo": "Allows to send notifications via Nexmo.",
-    "astrotomic/notifynder-sender-twilio": "Allows to send notifications via Twilio."
+    "astrotomic/notifer-sender-email": "Allows to send notifications as email.",
+    "astrotomic/notifer-sender-redis": "Allows to send notifications via Redis (Pub/Sub).",
+    "astrotomic/notifer-sender-slack": "Allows to send notifications via Slack.",
+    "astrotomic/notifer-sender-messagebird": "Allows to send notifications via MessageBird.",
+    "astrotomic/notifer-sender-nexmo": "Allows to send notifications via Nexmo.",
+    "astrotomic/notifer-sender-twilio": "Allows to send notifications via Twilio."
   },
   "autoload": {
     "psr-4": {
-      "Fenos\\Notifynder\\": "src/Notifynder"
+      "Itoufo\\Notifer\\": "src/Notifer"
     },
     "files": [
-      "src/Notifynder/Helpers/helpers.php"
+      "src/Notifer/Helpers/helpers.php"
     ]
   },
   "autoload-dev": {
     "classmap": [
-      "tests/NotifynderTestCase.php"
+      "tests/NotiferTestCase.php"
     ],
     "psr-4": {
-      "Fenos\\Tests\\": "tests/models"
+      "Itoufo\\Tests\\": "tests/models"
     }
   },
   "prefer-stable": true

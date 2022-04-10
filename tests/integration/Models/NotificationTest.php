@@ -1,8 +1,8 @@
 <?php
 
-use Fenos\Notifynder\Models\Notification;
+use Itoufo\Notifer\Models\Notification;
 
-class NotificationTest extends NotifynderTestCase
+class NotificationTest extends NotiferTestCase
 {
     public function testFillablesEmpty()
     {
@@ -24,7 +24,7 @@ class NotificationTest extends NotifynderTestCase
 
     public function testFillablesCustomFillables()
     {
-        $config = app('notifynder.config');
+        $config = app('notifer.config');
         $config->set('additional_fields.fillable', ['fillable_field']);
         $notification = new Notification();
         $this->assertInternalType('array', $notification->getFillable());
@@ -45,7 +45,7 @@ class NotificationTest extends NotifynderTestCase
 
     public function testFillablesCustomRequired()
     {
-        $config = app('notifynder.config');
+        $config = app('notifer.config');
         $config->set('additional_fields.required', ['required_field']);
         $notification = new Notification();
         $this->assertInternalType('array', $notification->getFillable());
@@ -66,7 +66,7 @@ class NotificationTest extends NotifynderTestCase
 
     public function testFillablesCustom()
     {
-        $config = app('notifynder.config');
+        $config = app('notifer.config');
         $config->set('additional_fields.fillable', ['fillable_field']);
         $config->set('additional_fields.required', ['required_field']);
         $notification = new Notification();

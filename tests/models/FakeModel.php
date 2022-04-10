@@ -1,6 +1,6 @@
 <?php
 
-namespace Fenos\Tests\Models;
+namespace Itoufo\Tests\Models;
 
 class FakeModel
 {

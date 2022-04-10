@@ -1,8 +1,8 @@
 <?php
 
-namespace Fenos\Tests\Models;
+namespace Itoufo\Tests\Models;
 
-use Fenos\Notifynder\Traits\Notifable;
+use Itoufo\Notifer\Traits\Notifable;
 use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model

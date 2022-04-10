@@ -1,5 +1,5 @@
 suites:
-  notifynder_suite:
-      namespace: Fenos\Notifynder
-      src_path: src/Notifynder
-#      psr4_prefix: Fenos\Notifynder
+  notifer_suite:
+      namespace: Itoufo\Notifer
+      src_path: src/Notifer
+#      psr4_prefix: Itoufo\Notifer

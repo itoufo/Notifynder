@@ -1,9 +1,9 @@
 <?php
 
-namespace Fenos\Tests\Models;
+namespace Itoufo\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Fenos\Notifynder\Traits\NotifableLaravel53;
+use Itoufo\Notifer\Traits\NotifableLaravel53;
 
 class UserL53 extends Model
 {

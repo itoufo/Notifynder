@@ -1,6 +1,6 @@
 <?php
 
-class NotifableEagerLoadingTest extends NotifynderTestCase
+class NotifableEagerLoadingTest extends NotiferTestCase
 {
     public function testGetLazyNotificationRelationDoesnotEagerLoad()
     {
@@ -46,7 +46,7 @@ class NotifableEagerLoadingTest extends NotifynderTestCase
         $user = $this->createUser();
         $this->sendNotificationTo($user);
 
-        $config = app('notifynder.config');
+        $config = app('notifer.config');
         $config->forget('eager_load');
 
         $notification = $user->getNotificationRelation()->first();
@@ -58,7 +58,7 @@ class NotifableEagerLoadingTest extends NotifynderTestCase
         $user = $this->createUser();
         $this->sendNotificationTo($user);
 
-        $config = app('notifynder.config');
+        $config = app('notifer.config');
 
         $config->set('eager_load', true);
         $notifications = $user->getNotifications();

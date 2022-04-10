@@ -20,7 +20,7 @@ engines:
         enabled: false
 ratings:
   paths:
-    - "src/Notifynder/**.php"
+    - "src/Notifer/**.php"
 exclude_paths:
   - tests/
   - spec/

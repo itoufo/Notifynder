@@ -1,29 +1,29 @@
 <?php
 
-use Fenos\Tests\Models\Car;
-use Fenos\Tests\Models\User;
-use Fenos\Tests\Models\CarL53;
-use Fenos\Tests\Models\UserL53;
+use Itoufo\Tests\Models\Car;
+use Itoufo\Tests\Models\User;
+use Itoufo\Tests\Models\CarL53;
+use Itoufo\Tests\Models\UserL53;
 use Illuminate\Database\Eloquent\Model;
-use Fenos\Notifynder\Models\Notification;
-use Fenos\Notifynder\NotifynderServiceProvider;
-use Fenos\Notifynder\Models\NotificationCategory;
+use Itoufo\Notifer\Models\Notification;
+use Itoufo\Notifer\NotiferServiceProvider;
+use Itoufo\Notifer\Models\NotificationCategory;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Fenos\Notifynder\Facades\Notifynder as NotifynderFacade;
+use Itoufo\Notifer\Facades\Notifer as NotiferFacade;
 
-abstract class NotifynderTestCase extends OrchestraTestCase
+abstract class NotiferTestCase extends OrchestraTestCase
 {
     protected function getPackageProviders($app)
     {
         return [
-            NotifynderServiceProvider::class,
+            NotiferServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Notifynder' => NotifynderFacade::class,
+            'Notifer' => NotiferFacade::class,
         ];
     }
 
@@ -35,8 +35,8 @@ abstract class NotifynderTestCase extends OrchestraTestCase
         $this->migrate($artisan);
         $this->migrate($artisan, '/../../../../tests/migrations');
         // Set up the User Test Model
-        app('config')->set('notifynder.notification_model', 'Fenos\Notifynder\Models\Notification');
-        app('config')->set('notifynder.model', 'Fenos\Tests\Models\User');
+        app('config')->set('notifer.notification_model', 'Itoufo\Notifer\Models\Notification');
+        app('config')->set('notifer.model', 'Itoufo\Tests\Models\User');
     }
 
     protected function getEnvironmentSetUp($app)
@@ -50,7 +50,7 @@ abstract class NotifynderTestCase extends OrchestraTestCase
             'driver' => 'mysql',
             'host' => '127.0.0.1',
             'port' => 3306,
-            'database' => 'notifynder',
+            'database' => 'notifer',
             'username' => 'travis',
             'password' => '',
             'charset' => 'utf8',
@@ -63,7 +63,7 @@ abstract class NotifynderTestCase extends OrchestraTestCase
             'driver' => 'pgsql',
             'host' => 'localhost',
             'port' => 5432,
-            'database' => 'notifynder',
+            'database' => 'notifer',
             'username' => 'postgres',
             'password' => '',
             'charset' => 'utf8',
@@ -81,7 +81,7 @@ abstract class NotifynderTestCase extends OrchestraTestCase
 
     public function tearDown()
     {
-        $resolver = app('notifynder.resolver.model');
+        $resolver = app('notifer.resolver.model');
         $resolver->setTable(Notification::class, 'notifications');
         app('db')->rollback();
         if (app('db')->getDriverName() == 'mysql') {

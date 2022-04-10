@@ -1,14 +1,14 @@
 <?php
 
-use Fenos\Notifynder\Models\Notification as ModelNotification;
+use Itoufo\Notifer\Models\Notification as ModelNotification;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 
-class NotifynderFacadeTest extends NotifynderTestCase
+class NotiferFacadeTest extends NotiferTestCase
 {
     public function testSendSingleNotification()
     {
         $category = $this->createCategory();
-        $sent = \Notifynder::category($category->getKey())
+        $sent = \Notifer::category($category->getKey())
             ->from(1)
             ->to(2)
             ->send();

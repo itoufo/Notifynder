@@ -1,25 +1,25 @@
 <?php
 
-use Fenos\Notifynder\Builder\Builder;
-use Fenos\Notifynder\Models\Notification;
-use Fenos\Notifynder\Managers\SenderManager;
-use Fenos\Notifynder\Models\Notification as ModelNotification;
-use Fenos\Notifynder\Builder\Notification as BuilderNotification;
+use Itoufo\Notifer\Builder\Builder;
+use Itoufo\Notifer\Models\Notification;
+use Itoufo\Notifer\Managers\SenderManager;
+use Itoufo\Notifer\Models\Notification as ModelNotification;
+use Itoufo\Notifer\Builder\Notification as BuilderNotification;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 
-class NotifynderManagerTest extends NotifynderTestCase
+class NotiferManagerTest extends NotiferTestCase
 {
     public function testCallUndefinedMethod()
     {
         $this->expectException(BadMethodCallException::class);
 
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $manager->undefinedMethod();
     }
 
     public function testGetBuilderInstance()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $builder = $manager->builder();
 
         $this->assertInstanceOf(Builder::class, $builder);
@@ -27,7 +27,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testGetSenderInstance()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $sender = $manager->sender();
 
         $this->assertInstanceOf(SenderManager::class, $sender);
@@ -35,7 +35,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testBuildSingleNotification()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $notification = $manager->category(1)
             ->from(1)
             ->to(2)
@@ -47,7 +47,7 @@ class NotifynderManagerTest extends NotifynderTestCase
     public function testBuildMultipleNotifications()
     {
         $datas = [2, 3, 4];
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $notifications = $manager->loop($datas, function ($builder, $data) {
             $builder->category(1)
                 ->from(1)
@@ -60,7 +60,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testSendSingleNotification()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->category($category->getKey())
             ->from(1)
@@ -76,7 +76,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testSendSingleAnonymousNotification()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->category($category->getKey())
             ->anonymous()
@@ -99,7 +99,7 @@ class NotifynderManagerTest extends NotifynderTestCase
     public function testSendMultipleNotifications()
     {
         $datas = [2, 3, 4];
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->loop($datas, function ($builder, $data) use ($category) {
             $builder->category($category->getKey())
@@ -116,7 +116,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testSendSingleSpecificNotification()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->category($category->getKey())
             ->from(1)
@@ -132,7 +132,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testSendOnceSameNotifications()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->category($category->getKey())
             ->from(1)
@@ -176,7 +176,7 @@ class NotifynderManagerTest extends NotifynderTestCase
 
     public function testSendOnceDifferentNotifications()
     {
-        $manager = app('notifynder');
+        $manager = app('notifer');
         $category = $this->createCategory();
         $sent = $manager->category($category->getKey())
             ->from(1)

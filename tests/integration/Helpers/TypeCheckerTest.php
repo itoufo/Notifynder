@@ -1,9 +1,9 @@
 <?php
 
 use Carbon\Carbon;
-use Fenos\Notifynder\Helpers\TypeChecker;
+use Itoufo\Notifer\Helpers\TypeChecker;
 
-class TypeCheckerTest extends NotifynderTestCase
+class TypeCheckerTest extends NotiferTestCase
 {
     public function testIsString()
     {
@@ -87,7 +87,7 @@ class TypeCheckerTest extends NotifynderTestCase
 
     public function testIsNotification()
     {
-        $this->assertTrue(TypeChecker::isNotification(new \Fenos\Notifynder\Models\Notification()));
+        $this->assertTrue(TypeChecker::isNotification(new \Itoufo\Notifer\Models\Notification()));
     }
 
     public function testIsNotificationFailStrict()

@@ -50,8 +50,8 @@ matrix:
 
 ## Run Scripts before Install
 before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS notifynder;'
-  - psql -c 'create database notifynder;' -U postgres
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS notifer;'
+  - psql -c 'create database notifer;' -U postgres
 
 ## Install Dependencies
 install:

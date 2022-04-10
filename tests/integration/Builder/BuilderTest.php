@@ -1,11 +1,11 @@
 <?php
 
 use Carbon\Carbon;
-use Fenos\Notifynder\Builder\Builder;
-use Fenos\Notifynder\Builder\Notification;
-use Fenos\Notifynder\Exceptions\UnvalidNotificationException;
+use Itoufo\Notifer\Builder\Builder;
+use Itoufo\Notifer\Builder\Notification;
+use Itoufo\Notifer\Exceptions\UnvalidNotificationException;
 
-class BuilderTest extends NotifynderTestCase
+class BuilderTest extends NotiferTestCase
 {
     public function testCreateSingleNotification()
     {
@@ -20,9 +20,9 @@ class BuilderTest extends NotifynderTestCase
 
         $this->assertSame(1, $notification->category_id);
         $this->assertSame(1, $notification->from_id);
-        $this->assertSame('Fenos\Tests\Models\User', $notification->from_type);
+        $this->assertSame('Itoufo\Tests\Models\User', $notification->from_type);
         $this->assertSame(2, $notification->to_id);
-        $this->assertSame('Fenos\Tests\Models\User', $notification->to_type);
+        $this->assertSame('Itoufo\Tests\Models\User', $notification->to_type);
         $this->assertInstanceOf(Carbon::class, $notification->created_at);
         $this->assertInstanceOf(Carbon::class, $notification->updated_at);
     }
@@ -42,7 +42,7 @@ class BuilderTest extends NotifynderTestCase
         $this->assertNull($notification->from_id);
         $this->assertNull($notification->from_type);
         $this->assertSame(2, $notification->to_id);
-        $this->assertSame('Fenos\Tests\Models\User', $notification->to_type);
+        $this->assertSame('Itoufo\Tests\Models\User', $notification->to_type);
         $this->assertInstanceOf(Carbon::class, $notification->created_at);
         $this->assertInstanceOf(Carbon::class, $notification->updated_at);
     }
@@ -54,7 +54,7 @@ class BuilderTest extends NotifynderTestCase
             ->category(1)
             ->from(1)
             ->to(2)
-            ->url('http://notifynder.info')
+            ->url('http://notifer.info')
             ->extra([
                 'foo' => 'bar',
             ])
@@ -63,7 +63,7 @@ class BuilderTest extends NotifynderTestCase
 
         $this->assertInstanceOf(Notification::class, $notification);
 
-        $this->assertSame('http://notifynder.info', $notification->url);
+        $this->assertSame('http://notifer.info', $notification->url);
         $this->assertInternalType('array', $notification->extra);
         $this->assertCount(1, $notification->extra);
         $this->assertSame('bar', $notification->extra['foo']);
@@ -172,9 +172,9 @@ class BuilderTest extends NotifynderTestCase
 
             $this->assertSame(1, $notification->category_id);
             $this->assertSame(1, $notification->from_id);
-            $this->assertSame('Fenos\Tests\Models\User', $notification->from_type);
+            $this->assertSame('Itoufo\Tests\Models\User', $notification->from_type);
             $this->assertSame($datas[$index], $notification->to_id);
-            $this->assertSame('Fenos\Tests\Models\User', $notification->to_type);
+            $this->assertSame('Itoufo\Tests\Models\User', $notification->to_type);
             $this->assertInstanceOf(Carbon::class, $notification->created_at);
             $this->assertInstanceOf(Carbon::class, $notification->updated_at);
         }
@@ -193,7 +193,7 @@ class BuilderTest extends NotifynderTestCase
 
     public function testCreateSingleNotificationWithAdditionalField()
     {
-        notifynder_config()->set('additional_fields.fillable', []);
+        notifer_config()->set('additional_fields.fillable', []);
 
         $builder = new Builder();
         $notification = $builder
@@ -207,7 +207,7 @@ class BuilderTest extends NotifynderTestCase
         $this->assertSame(1, $notification->category_id);
         $this->assertNull($notification->additional_field);
 
-        notifynder_config()->set('additional_fields.fillable', ['additional_field']);
+        notifer_config()->set('additional_fields.fillable', ['additional_field']);
 
         $builder = new Builder();
         $notification = $builder
@@ -226,7 +226,7 @@ class BuilderTest extends NotifynderTestCase
     {
         $this->expectException(UnvalidNotificationException::class);
 
-        notifynder_config()->set('additional_fields.required', ['required_field']);
+        notifer_config()->set('additional_fields.required', ['required_field']);
 
         $builder = new Builder();
         $notification = $builder
@@ -238,7 +238,7 @@ class BuilderTest extends NotifynderTestCase
 
     public function testCreateSingleNotificationWithRequiredField()
     {
-        notifynder_config()->set('additional_fields.required', ['required_field']);
+        notifer_config()->set('additional_fields.required', ['required_field']);
 
         $builder = new Builder();
         $notification = $builder
@@ -258,16 +258,16 @@ class BuilderTest extends NotifynderTestCase
         $builder = new Builder();
         $notification = $builder
             ->category(1)
-            ->from(\Fenos\Tests\Models\User::class, 1)
-            ->to(\Fenos\Tests\Models\User::class, 2)
+            ->from(\Itoufo\Tests\Models\User::class, 1)
+            ->to(\Itoufo\Tests\Models\User::class, 2)
             ->getNotification();
 
         $this->assertInstanceOf(Notification::class, $notification);
         $this->assertSame(1, $notification->category_id);
         $this->assertSame(1, $notification->from_id);
-        $this->assertSame(\Fenos\Tests\Models\User::class, $notification->from_type);
+        $this->assertSame(\Itoufo\Tests\Models\User::class, $notification->from_type);
         $this->assertSame(2, $notification->to_id);
-        $this->assertSame(\Fenos\Tests\Models\User::class, $notification->to_type);
+        $this->assertSame(\Itoufo\Tests\Models\User::class, $notification->to_type);
     }
 
     public function testOffsetMethods()

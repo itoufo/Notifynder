@@ -1,18 +1,18 @@
 <?php
 
-use Fenos\Notifynder\Builder\Builder;
-use Fenos\Notifynder\Builder\Notification;
-use Fenos\Notifynder\Managers\NotifynderManager;
+use Itoufo\Notifer\Builder\Builder;
+use Itoufo\Notifer\Builder\Notification;
+use Itoufo\Notifer\Managers\NotiferManager;
 
-class NotifableTest extends NotifynderTestCase
+class NotifableTest extends NotiferTestCase
 {
-    public function testNotifynder()
+    public function testNotifer()
     {
         $user = $this->createUser();
-        $notifynder = $user->notifynder(1);
-        $this->assertInstanceOf(NotifynderManager::class, $notifynder);
-        $notifynder->from(1)->to(2);
-        $builder = $notifynder->builder();
+        $notifer = $user->notifer(1);
+        $this->assertInstanceOf(NotiferManager::class, $notifer);
+        $notifer->from(1)->to(2);
+        $builder = $notifer->builder();
         $this->assertInstanceOf(Builder::class, $builder);
         $notification = $builder->getNotification();
         $this->assertInstanceOf(Notification::class, $notification);
@@ -23,10 +23,10 @@ class NotifableTest extends NotifynderTestCase
     {
         $category = $this->createCategory();
         $user = $this->createUser();
-        $notifynder = $user->sendNotificationFrom($category->getKey());
-        $this->assertInstanceOf(NotifynderManager::class, $notifynder);
-        $notifynder->to(2);
-        $builder = $notifynder->builder();
+        $notifer = $user->sendNotificationFrom($category->getKey());
+        $this->assertInstanceOf(NotiferManager::class, $notifer);
+        $notifer->to(2);
+        $builder = $notifer->builder();
         $this->assertInstanceOf(Builder::class, $builder);
         $notification = $builder->getNotification();
         $this->assertInstanceOf(Notification::class, $notification);
@@ -38,16 +38,16 @@ class NotifableTest extends NotifynderTestCase
     {
         $category = $this->createCategory();
         $user = $this->createUser();
-        $notifynder = $user->sendNotificationTo($category->getKey());
-        $this->assertInstanceOf(NotifynderManager::class, $notifynder);
-        $notifynder->from(2);
-        $builder = $notifynder->builder();
+        $notifer = $user->sendNotificationTo($category->getKey());
+        $this->assertInstanceOf(NotiferManager::class, $notifer);
+        $notifer->from(2);
+        $builder = $notifer->builder();
         $this->assertInstanceOf(Builder::class, $builder);
         $notification = $builder->getNotification();
         $this->assertInstanceOf(Notification::class, $notification);
         $this->assertSame($category->getKey(), $notification->category_id);
         $this->assertSame($user->getKey(), $notification->to_id);
-        $notifynder->send();
+        $notifer->send();
         $this->assertCount(1, $user->getNotificationRelation);
     }
 
@@ -64,7 +64,7 @@ class NotifableTest extends NotifynderTestCase
 
     public function testNotificationsMorphMany()
     {
-        notifynder_config()->set('polymorphic', true);
+        notifer_config()->set('polymorphic', true);
 
         $user = $this->createUser();
         $this->sendNotificationTo($user);
